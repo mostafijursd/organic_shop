@@ -11,9 +11,9 @@ function Header() {
 
 <Link to={""} >
 {/*  logo here start */}
-<div className=' h-14 flex gap-2 '>
-<img src={logo}  className=' h-full  border-2 border-soild border-green-900  rounded-full'/>
-<div className='  justify-between mt-3 '><span className=' text-3xl italic  text-white '>Organic Shop</span></div>
+<div className=' h-12 flex gap-2 '>
+<img src={logo}  className=' h-full '/>
+<div className='  justify-between mt-2 rounded-full shadow '><span className=' text-2xl italic text-lime-900   '>Organic <span className=' text-slate-300'>Shop</span> </span></div>
 </div>
 {/*  logo here end */}
 </Link>
