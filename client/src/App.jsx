@@ -2,13 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import Header from './components/Header'
+import {Outlet} from 'react-router-dom'
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <div>
-      <h1 className=' bg-slate-800'>Organic Shop </h1>
+     <Header/>
+     <main className=' pt-16'>
+      <Outlet/>
+     </main>
     </div>
   )
 }
