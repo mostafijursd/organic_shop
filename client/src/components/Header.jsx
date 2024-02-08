@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
-import { FaUserAlt } from "react-icons/fa";
+import { HiOutlineUserCircle } from "react-icons/hi";
 import { IoMdCart } from "react-icons/io";
 function Header() {
+
+  const [showMenu,setShowMenu]=useState(false);
+   const handleShowMenu =()=>{
+    setShowMenu(preve=>!preve)
+   }
+
   return (
     <div className=' fixed shadow-md w-full h-16 px-2 md:px-4 bg-green-400 z-50'>
         {/* desktop */}
@@ -13,7 +19,9 @@ function Header() {
 {/*  logo here start */}
 <div className=' h-12 flex gap-2 '>
 <img src={logo}  className=' h-full '/>
-<div className='  justify-between mt-2 rounded-full shadow '><span className=' text-2xl italic text-lime-900   '>Organic <span className=' text-slate-300'>Shop</span> </span></div>
+<div className='  justify-between mt-2 rounded-full shadow '>
+  <span className=' text-lime-900 italic text-2xl   '>Organic <span className=' text-slate-300'>Shop</span> </span>
+  </div>
 </div>
 {/*  logo here end */}
 </Link>
@@ -31,11 +39,17 @@ function Header() {
  </div>
 
 
-<div className='text-2xl text-slate-600'>
+<div className=' text-slate-600' onClick={handleShowMenu}>
 
-   <div className=' border-2 border-solid border-slate-600 p-1 rounded-full'>
-   <FaUserAlt/>
+   <div className=' text-3xl'>
+   <HiOutlineUserCircle/>
    </div>
+   {
+    showMenu && ( <div className=' absolute right-2 bg-white py-4 px-2 shadow drop-shadow-md flex flex-col'>
+    <Link to={"newproduct"} className=' whitespace-nowrap cursor-pointer'>New Products</Link>
+    <Link to={"login"} className=' whitespace-nowrap cursor-pointer'>Login</Link>
+     </div>
+  ) }
 
 </div>
 </div>
