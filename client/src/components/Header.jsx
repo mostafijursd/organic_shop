@@ -19,9 +19,10 @@ function Header() {
 {/*  logo here start */}
 <div className=' h-12 flex gap-2 '>
 <img src={logo}  className=' h-full '/>
-<div className='  justify-between mt-2 rounded-full shadow '>
-  <span className=' text-lime-900 italic text-2xl   '>Organic <span className=' text-slate-300'>Shop</span> </span>
-  </div>
+<div class='md:justify-between md:mt-2 md:rounded-full md:shadow'>
+  <span class='text-lime-900 md:italic md:text-2xl'>Organic <span class='text-slate-300'>Shop</span></span>
+</div>
+
 </div>
 {/*  logo here end */}
 </Link>
